@@ -12,9 +12,12 @@ Usage:
 3. Create a new API client on your Wallabag instance, for example at https://app.wallabag.it/developer/client/create
 4. Copy those credentials along with your Wallabag server URL & login credentials into a config.json file, as in this example: https://github.com/Strubbl/wallabago/blob/master/example/config.json
 5. go run main.go
+6. The script is safe to run multiple times. 
+    - Wallabag doesn't get confused if you keep trying to add the same tags to the same entries.
+    - The Wallabag entries that are downloaded are cached in `.wallabag_bin_items` for speed of re-execution and so you don't overload the server. You can delete that file to force a re-download.
 
 Notes:
-- Your Pocket export is named `ril_export.html`. If not, use the `-pocketfile=` parameter.
+- Your Pocket export is expected to be named `ril_export.html`. If not, use the `-pocketfile=` parameter.
 - You don't want to bother copying tags for all the articles you've already archived in Wallabag. If you want to tag ALL your Wallabag entries, use `-archives=2`
 
 ## With thanks to
