@@ -13,3 +13,10 @@
 
 config.json
 ril_export*
+
+# debug outputs
+.matchedPocketEntries
+.unmatchedPocketEntries
+.unmatchedWallabagEntries
+.wallabag_bin_items
+.wallabag_items
